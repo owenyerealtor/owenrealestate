@@ -1,0 +1,697 @@
+# Sveltia CMS config – 网站管理后台配置
+backend:
+  name: github
+  repo: OWNER/REPO   # <- 替换为您的 GitHub 仓库，例如 wenhaoye/website
+  branch: main
+media_folder: site/images/uploads
+public_folder: images/uploads
+locale: zh_Hans
+site_url: https://SITE_URL
+display_url: https://SITE_URL
+logo_url: /images/wenhao.jpg
+collections:
+  - name: gallery
+    label: "📷 作品相册 Gallery"
+    files:
+      - name: gallery
+        label: "相册照片（拖动可排序）"
+        file: site/content/gallery.json
+        format: json
+        fields:
+          - name: items
+            label: 照片
+            label_singular: 照片
+            widget: list
+            summary: "{{fields.title_zh}} / {{fields.title_en}}"
+            fields:
+              - { name: image, label: 照片, widget: image }
+              - name: category
+                label: 分类
+                widget: select
+                default: realestate
+                options:
+                  - { label: "地产 Real Estate", value: realestate }
+                  - { label: "建筑 Construction", value: construction }
+                  - { label: "房屋管理 Management", value: management }
+                  - { label: "其他 Other", value: other }
+              - { name: title_zh, label: "中文标题", widget: string, required: false }
+              - { name: title_en, label: "English title", widget: string, required: false }
+  - name: site
+    label: "📝 网站内容 Site Content"
+    files:
+      - name: settings
+        label: "联系方式与图片 Contact & Images"
+        file: site/content/site.json
+        format: json
+        fields:
+          - name: settings
+            label: 联系方式
+            widget: object
+            fields:
+              - { name: phone, label: "电话 Phone", widget: string }
+              - { name: email, label: "邮箱 Email", widget: string, required: false }
+              - { name: wechat, label: "微信号 WeChat", widget: string, required: false }
+              - { name: har_url, label: "HAR 主页链接", widget: string }
+              - { name: loan_url, label: "贷款主页链接", widget: string }
+              - { name: apply_url, label: "贷款申请链接", widget: string }
+          - name: images
+            label: 网站图片
+            widget: object
+            fields:
+              - { name: profile, label: "个人头像 Profile photo", widget: image }
+              - { name: hero_bg, label: "首页背景大图 Hero background", widget: image }
+              - { name: svc_realestate, label: "业务图：地产", widget: image }
+              - { name: svc_mortgage, label: "业务图：贷款", widget: image }
+              - { name: svc_construction, label: "业务图：建筑", widget: image }
+              - { name: svc_management, label: "业务图：房屋管理", widget: image }
+          - name: texts
+            label: 文字（中英文）
+            widget: object
+            fields:
+              - name: nav
+                label: "导航栏 Navigation"
+                widget: object
+                collapsed: true
+                fields:
+                  - name: k01
+                    label: "业务"
+                    widget: object
+                    fields:
+                      - { name: zh, label: "中文", widget: string }
+                      - { name: en, label: "English", widget: string }
+                  - name: k02
+                    label: "关于我"
+                    widget: object
+                    fields:
+                      - { name: zh, label: "中文", widget: string }
+                      - { name: en, label: "English", widget: string }
+                  - name: k03
+                    label: "作品相册"
+                    widget: object
+                    fields:
+                      - { name: zh, label: "中文", widget: string }
+                      - { name: en, label: "English", widget: string }
+                  - name: k04
+                    label: "联系"
+                    widget: object
+                    fields:
+                      - { name: zh, label: "中文", widget: string }
+                      - { name: en, label: "English", widget: string }
+              - name: hero
+                label: "首页大图 Hero"
+                widget: object
+                collapsed: true
+                fields:
+                  - name: k01
+                    label: "休斯敦 · 一站式房产服务"
+                    widget: object
+                    fields:
+                      - { name: zh, label: "中文", widget: string }
+                      - { name: en, label: "English", widget: string }
+                  - name: k02
+                    label: "买房、贷款、建房、管房 / 一个人帮您全部搞定"
+                    widget: object
+                    fields:
+                      - { name: zh, label: "中文", widget: string }
+                      - { name: en, label: "English", widget: string }
+                  - name: k03
+                    label: "我是 Wenhao Ye，休斯敦持牌地产经纪人与贷款专员"
+                    widget: object
+                    fields:
+                      - { name: zh, label: "中文", widget: text }
+                      - { name: en, label: "English", widget: text }
+                  - name: k04
+                    label: "🏠 地产经纪"
+                    widget: object
+                    fields:
+                      - { name: zh, label: "中文", widget: string }
+                      - { name: en, label: "English", widget: string }
+                  - name: k05
+                    label: "💰 房屋贷款"
+                    widget: object
+                    fields:
+                      - { name: zh, label: "中文", widget: string }
+                      - { name: en, label: "English", widget: string }
+                  - name: k06
+                    label: "🏗️ 建筑施工"
+                    widget: object
+                    fields:
+                      - { name: zh, label: "中文", widget: string }
+                      - { name: en, label: "English", widget: string }
+                  - name: k07
+                    label: "🔑 房屋管理"
+                    widget: object
+                    fields:
+                      - { name: zh, label: "中文", widget: string }
+                      - { name: en, label: "English", widget: string }
+                  - name: k08
+                    label: "免费咨询"
+                    widget: object
+                    fields:
+                      - { name: zh, label: "中文", widget: string }
+                      - { name: en, label: "English", widget: string }
+                  - name: k09
+                    label: "REALTOR® · 贷款专员 NMLS #254110"
+                    widget: object
+                    fields:
+                      - { name: zh, label: "中文", widget: string }
+                      - { name: en, label: "English", widget: string }
+              - name: stats
+                label: "数据条 Stats"
+                widget: object
+                collapsed: true
+                fields:
+                  - name: k01
+                    label: "项核心业务"
+                    widget: object
+                    fields:
+                      - { name: zh, label: "中文", widget: string }
+                      - { name: en, label: "English", widget: string }
+                  - name: k02
+                    label: "HAR 买卖/租赁成交"
+                    widget: object
+                    fields:
+                      - { name: zh, label: "中文", widget: string }
+                      - { name: en, label: "English", widget: string }
+                  - name: k03
+                    label: "贷款执照州"
+                    widget: object
+                    fields:
+                      - { name: zh, label: "中文", widget: string }
+                      - { name: en, label: "English", widget: string }
+                  - name: k04
+                    label: "中 / 英"
+                    widget: object
+                    fields:
+                      - { name: zh, label: "中文", widget: string }
+                      - { name: en, label: "English", widget: string }
+                  - name: k05
+                    label: "中英双语服务"
+                    widget: object
+                    fields:
+                      - { name: zh, label: "中文", widget: string }
+                      - { name: en, label: "English", widget: string }
+              - name: services
+                label: "四大业务 Services"
+                widget: object
+                collapsed: true
+                fields:
+                  - name: k01
+                    label: "我的业务"
+                    widget: object
+                    fields:
+                      - { name: zh, label: "中文", widget: string }
+                      - { name: en, label: "English", widget: string }
+                  - name: k02
+                    label: "四大业务，一站式服务"
+                    widget: object
+                    fields:
+                      - { name: zh, label: "中文", widget: string }
+                      - { name: en, label: "English", widget: string }
+                  - name: k03
+                    label: "从找房、融资，到建造与长期管理，省去您在多家公司之间来回"
+                    widget: object
+                    fields:
+                      - { name: zh, label: "中文", widget: text }
+                      - { name: en, label: "English", widget: text }
+                  - name: k04
+                    label: "地产经纪"
+                    widget: object
+                    fields:
+                      - { name: zh, label: "中文", widget: string }
+                      - { name: en, label: "English", widget: string }
+                  - name: k05
+                    label: "大休斯敦地区买房、卖房、租房全程代理，熟悉 Katy、C"
+                    widget: object
+                    fields:
+                      - { name: zh, label: "中文", widget: text }
+                      - { name: en, label: "English", widget: text }
+                  - name: k06
+                    label: "买方代理：找房、看房、谈判、验房"
+                    widget: object
+                    fields:
+                      - { name: zh, label: "中文", widget: string }
+                      - { name: en, label: "English", widget: string }
+                  - name: k07
+                    label: "卖方代理：定价、挂牌、营销推广"
+                    widget: object
+                    fields:
+                      - { name: zh, label: "中文", widget: string }
+                      - { name: en, label: "English", widget: string }
+                  - name: k08
+                    label: "租赁与投资房分析"
+                    widget: object
+                    fields:
+                      - { name: zh, label: "中文", widget: string }
+                      - { name: en, label: "English", widget: string }
+                  - name: k09
+                    label: "经纪公司："
+                    widget: object
+                    fields:
+                      - { name: zh, label: "中文", widget: string }
+                      - { name: en, label: "English", widget: string }
+                  - name: k10
+                    label: "查看 HAR 房源 →"
+                    widget: object
+                    fields:
+                      - { name: zh, label: "中文", widget: string }
+                      - { name: en, label: "English", widget: string }
+                  - name: k11
+                    label: "房屋贷款"
+                    widget: object
+                    fields:
+                      - { name: zh, label: "中文", widget: string }
+                      - { name: en, label: "English", widget: string }
+                  - name: k12
+                    label: "持牌贷款专员，可比较多家贷款机构的利率与产品，为您找到合"
+                    widget: object
+                    fields:
+                      - { name: zh, label: "中文", widget: text }
+                      - { name: en, label: "English", widget: text }
+                  - name: k13
+                    label: "首次购房、Conventional / FHA / VA"
+                    widget: object
+                    fields:
+                      - { name: zh, label: "中文", widget: string }
+                      - { name: en, label: "English", widget: string }
+                  - name: k14
+                    label: "再融资、投资房 DSCR 贷款"
+                    widget: object
+                    fields:
+                      - { name: zh, label: "中文", widget: string }
+                      - { name: en, label: "English", widget: string }
+                  - name: k15
+                    label: "非传统收入 / 外国人贷款咨询"
+                    widget: object
+                    fields:
+                      - { name: zh, label: "中文", widget: string }
+                      - { name: en, label: "English", widget: string }
+                  - name: k16
+                    label: "在线申请 →"
+                    widget: object
+                    fields:
+                      - { name: zh, label: "中文", widget: string }
+                      - { name: en, label: "English", widget: string }
+                  - name: k17
+                    label: "建筑公司"
+                    widget: object
+                    fields:
+                      - { name: zh, label: "中文", widget: string }
+                      - { name: en, label: "English", widget: string }
+                  - name: k18
+                    label: "新建住宅、翻新改造、维修工程，从设计、报批到施工交付全程"
+                    widget: object
+                    fields:
+                      - { name: zh, label: "中文", widget: text }
+                      - { name: en, label: "English", widget: text }
+                  - name: k19
+                    label: "新房建造 / 自建房 / 投资开发"
+                    widget: object
+                    fields:
+                      - { name: zh, label: "中文", widget: string }
+                      - { name: en, label: "English", widget: string }
+                  - name: k20
+                    label: "厨房、浴室、全屋翻新"
+                    widget: object
+                    fields:
+                      - { name: zh, label: "中文", widget: string }
+                      - { name: en, label: "English", widget: string }
+                  - name: k21
+                    label: "买房前维修报价与验房问题修复"
+                    widget: object
+                    fields:
+                      - { name: zh, label: "中文", widget: string }
+                      - { name: en, label: "English", widget: string }
+                  - name: k22
+                    label: "与地产及贷款业务无缝衔接"
+                    widget: object
+                    fields:
+                      - { name: zh, label: "中文", widget: string }
+                      - { name: en, label: "English", widget: string }
+                  - name: k23
+                    label: "房屋管理"
+                    widget: object
+                    fields:
+                      - { name: zh, label: "中文", widget: string }
+                      - { name: en, label: "English", widget: string }
+                  - name: k24
+                    label: "为房东和外地投资者提供省心的出租房管理，让您的房产稳定产"
+                    widget: object
+                    fields:
+                      - { name: zh, label: "中文", widget: text }
+                      - { name: en, label: "English", widget: text }
+                  - name: k25
+                    label: "招租、租客筛选、签约"
+                    widget: object
+                    fields:
+                      - { name: zh, label: "中文", widget: string }
+                      - { name: en, label: "English", widget: string }
+                  - name: k26
+                    label: "收租、维修、定期巡查"
+                    widget: object
+                    fields:
+                      - { name: zh, label: "中文", widget: string }
+                      - { name: en, label: "English", widget: string }
+                  - name: k27
+                    label: "月度报表，远程投资者也放心"
+                    widget: object
+                    fields:
+                      - { name: zh, label: "中文", widget: string }
+                      - { name: en, label: "English", widget: string }
+                  - name: k28
+                    label: "自有施工团队，维修更快更省"
+                    widget: object
+                    fields:
+                      - { name: zh, label: "中文", widget: string }
+                      - { name: en, label: "English", widget: string }
+              - name: flow
+                label: "一条龙流程 Process"
+                widget: object
+                collapsed: true
+                fields:
+                  - name: k01
+                    label: "为什么选择我"
+                    widget: object
+                    fields:
+                      - { name: zh, label: "中文", widget: string }
+                      - { name: en, label: "English", widget: string }
+                  - name: k02
+                    label: "一条龙投资流程"
+                    widget: object
+                    fields:
+                      - { name: zh, label: "中文", widget: string }
+                      - { name: en, label: "English", widget: string }
+                  - name: k03
+                    label: "1. 找房选房"
+                    widget: object
+                    fields:
+                      - { name: zh, label: "中文", widget: string }
+                      - { name: en, label: "English", widget: string }
+                  - name: k04
+                    label: "根据预算与目标，精选自住或投资房源"
+                    widget: object
+                    fields:
+                      - { name: zh, label: "中文", widget: string }
+                      - { name: en, label: "English", widget: string }
+                  - name: k05
+                    label: "2. 贷款融资"
+                    widget: object
+                    fields:
+                      - { name: zh, label: "中文", widget: string }
+                      - { name: en, label: "English", widget: string }
+                  - name: k06
+                    label: "同步预批贷款，比较利率，快速成交"
+                    widget: object
+                    fields:
+                      - { name: zh, label: "中文", widget: string }
+                      - { name: en, label: "English", widget: string }
+                  - name: k07
+                    label: "3. 翻新建造"
+                    widget: object
+                    fields:
+                      - { name: zh, label: "中文", widget: string }
+                      - { name: en, label: "English", widget: string }
+                  - name: k08
+                    label: "自有施工团队，提升房屋价值"
+                    widget: object
+                    fields:
+                      - { name: zh, label: "中文", widget: string }
+                      - { name: en, label: "English", widget: string }
+                  - name: k09
+                    label: "4. 出租管理"
+                    widget: object
+                    fields:
+                      - { name: zh, label: "中文", widget: string }
+                      - { name: en, label: "English", widget: string }
+                  - name: k10
+                    label: "招租托管，持续稳定现金流"
+                    widget: object
+                    fields:
+                      - { name: zh, label: "中文", widget: string }
+                      - { name: en, label: "English", widget: string }
+              - name: about
+                label: "关于我 About"
+                widget: object
+                collapsed: true
+                fields:
+                  - name: k01
+                    label: "休斯敦 / 德克萨斯州"
+                    widget: object
+                    fields:
+                      - { name: zh, label: "中文", widget: string }
+                      - { name: en, label: "English", widget: string }
+                  - name: k02
+                    label: "关于我"
+                    widget: object
+                    fields:
+                      - { name: zh, label: "中文", widget: string }
+                      - { name: en, label: "English", widget: string }
+                  - name: k03
+                    label: "我在休斯敦从事房地产相关行业，深知客户在买房、贷款、装修"
+                    widget: object
+                    fields:
+                      - { name: zh, label: "中文", widget: text }
+                      - { name: en, label: "English", widget: text }
+                  - name: k04
+                    label: "我服务华人家庭、首次购房者以及本地和外地投资者，提供中英"
+                    widget: object
+                    fields:
+                      - { name: zh, label: "中文", widget: text }
+                      - { name: en, label: "English", widget: text }
+                  - name: k05
+                    label: "HAR 会员"
+                    widget: object
+                    fields:
+                      - { name: zh, label: "中文", widget: string }
+                      - { name: en, label: "English", widget: string }
+                  - name: k06
+                    label: "贷款专员"
+                    widget: object
+                    fields:
+                      - { name: zh, label: "中文", widget: string }
+                      - { name: en, label: "English", widget: string }
+                  - name: k07
+                    label: "企业主"
+                    widget: object
+                    fields:
+                      - { name: zh, label: "中文", widget: string }
+                      - { name: en, label: "English", widget: string }
+                  - name: k08
+                    label: "建筑公司 · 房屋管理公司"
+                    widget: object
+                    fields:
+                      - { name: zh, label: "中文", widget: string }
+                      - { name: en, label: "English", widget: string }
+              - name: gallery
+                label: "相册标题 Gallery headings"
+                widget: object
+                collapsed: true
+                fields:
+                  - name: k01
+                    label: "作品与房源"
+                    widget: object
+                    fields:
+                      - { name: zh, label: "中文", widget: string }
+                      - { name: en, label: "English", widget: string }
+                  - name: k02
+                    label: "作品相册"
+                    widget: object
+                    fields:
+                      - { name: zh, label: "中文", widget: string }
+                      - { name: en, label: "English", widget: string }
+                  - name: k03
+                    label: "成交房源、施工项目、管理物业的真实照片"
+                    widget: object
+                    fields:
+                      - { name: zh, label: "中文", widget: text }
+                      - { name: en, label: "English", widget: text }
+                  - name: k04
+                    label: "全部"
+                    widget: object
+                    fields:
+                      - { name: zh, label: "中文", widget: string }
+                      - { name: en, label: "English", widget: string }
+                  - name: k05
+                    label: "地产"
+                    widget: object
+                    fields:
+                      - { name: zh, label: "中文", widget: string }
+                      - { name: en, label: "English", widget: string }
+                  - name: k06
+                    label: "建筑"
+                    widget: object
+                    fields:
+                      - { name: zh, label: "中文", widget: string }
+                      - { name: en, label: "English", widget: string }
+                  - name: k07
+                    label: "房屋管理"
+                    widget: object
+                    fields:
+                      - { name: zh, label: "中文", widget: string }
+                      - { name: en, label: "English", widget: string }
+                  - name: k08
+                    label: "其他"
+                    widget: object
+                    fields:
+                      - { name: zh, label: "中文", widget: string }
+                      - { name: en, label: "English", widget: string }
+              - name: contact
+                label: "联系 Contact"
+                widget: object
+                collapsed: true
+                fields:
+                  - name: k01
+                    label: "联系我"
+                    widget: object
+                    fields:
+                      - { name: zh, label: "中文", widget: string }
+                      - { name: en, label: "English", widget: string }
+                  - name: k02
+                    label: "开始您的休斯敦房产之旅"
+                    widget: object
+                    fields:
+                      - { name: zh, label: "中文", widget: string }
+                      - { name: en, label: "English", widget: string }
+                  - name: k03
+                    label: "买房、贷款、建房还是托管？欢迎随时联系，中英文均可。"
+                    widget: object
+                    fields:
+                      - { name: zh, label: "中文", widget: text }
+                      - { name: en, label: "English", widget: text }
+                  - name: k04
+                    label: "电话 / 短信"
+                    widget: object
+                    fields:
+                      - { name: zh, label: "中文", widget: string }
+                      - { name: en, label: "English", widget: string }
+                  - name: k05
+                    label: "邮箱"
+                    widget: object
+                    fields:
+                      - { name: zh, label: "中文", widget: string }
+                      - { name: en, label: "English", widget: string }
+                  - name: k06
+                    label: "微信"
+                    widget: object
+                    fields:
+                      - { name: zh, label: "中文", widget: string }
+                      - { name: en, label: "English", widget: string }
+                  - name: k07
+                    label: "HAR 房源主页"
+                    widget: object
+                    fields:
+                      - { name: zh, label: "中文", widget: string }
+                      - { name: en, label: "English", widget: string }
+                  - name: k08
+                    label: "贷款申请"
+                    widget: object
+                    fields:
+                      - { name: zh, label: "中文", widget: string }
+                      - { name: en, label: "English", widget: string }
+                  - name: k09
+                    label: "服务区域"
+                    widget: object
+                    fields:
+                      - { name: zh, label: "中文", widget: string }
+                      - { name: en, label: "English", widget: string }
+                  - name: k10
+                    label: "大休斯敦地区 Greater Houston, TX"
+                    widget: object
+                    fields:
+                      - { name: zh, label: "中文", widget: string }
+                      - { name: en, label: "English", widget: string }
+                  - name: k11
+                    label: "免费咨询"
+                    widget: object
+                    fields:
+                      - { name: zh, label: "中文", widget: string }
+                      - { name: en, label: "English", widget: string }
+                  - name: k12
+                    label: "您的姓名"
+                    widget: object
+                    fields:
+                      - { name: zh, label: "中文", widget: string }
+                      - { name: en, label: "English", widget: string }
+                  - name: k13
+                    label: "电话"
+                    widget: object
+                    fields:
+                      - { name: zh, label: "中文", widget: string }
+                      - { name: en, label: "English", widget: string }
+                  - name: k14
+                    label: "邮箱（可选）"
+                    widget: object
+                    fields:
+                      - { name: zh, label: "中文", widget: string }
+                      - { name: en, label: "English", widget: string }
+                  - name: k15
+                    label: "我想买房"
+                    widget: object
+                    fields:
+                      - { name: zh, label: "中文", widget: string }
+                      - { name: en, label: "English", widget: string }
+                  - name: k16
+                    label: "我想卖房"
+                    widget: object
+                    fields:
+                      - { name: zh, label: "中文", widget: string }
+                      - { name: en, label: "English", widget: string }
+                  - name: k17
+                    label: "贷款 / 再融资"
+                    widget: object
+                    fields:
+                      - { name: zh, label: "中文", widget: string }
+                      - { name: en, label: "English", widget: string }
+                  - name: k18
+                    label: "建房 / 翻新"
+                    widget: object
+                    fields:
+                      - { name: zh, label: "中文", widget: string }
+                      - { name: en, label: "English", widget: string }
+                  - name: k19
+                    label: "房屋托管"
+                    widget: object
+                    fields:
+                      - { name: zh, label: "中文", widget: string }
+                      - { name: en, label: "English", widget: string }
+                  - name: k20
+                    label: "请简单描述您的需求"
+                    widget: object
+                    fields:
+                      - { name: zh, label: "中文", widget: string }
+                      - { name: en, label: "English", widget: string }
+                  - name: k21
+                    label: "发送短信给 Wenhao"
+                    widget: object
+                    fields:
+                      - { name: zh, label: "中文", widget: string }
+                      - { name: en, label: "English", widget: string }
+              - name: footer
+                label: "页脚 Footer"
+                widget: object
+                collapsed: true
+                fields:
+                  - name: k01
+                    label: "德州休斯敦"
+                    widget: object
+                    fields:
+                      - { name: zh, label: "中文", widget: string }
+                      - { name: en, label: "English", widget: string }
+                  - name: k02
+                    label: "Walzel Properties 持牌地产经纪人 · "
+                    widget: object
+                    fields:
+                      - { name: zh, label: "中文", widget: text }
+                      - { name: en, label: "English", widget: text }
+                  - name: k03
+                    label: "TREC 消费者保护通知"
+                    widget: object
+                    fields:
+                      - { name: zh, label: "中文", widget: string }
+                      - { name: en, label: "English", widget: string }
+                  - name: k04
+                    label: "TREC 经纪服务信息"
+                    widget: object
+                    fields:
+                      - { name: zh, label: "中文", widget: string }
+                      - { name: en, label: "English", widget: string }

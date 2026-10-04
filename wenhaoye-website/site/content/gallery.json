@@ -1,0 +1,28 @@
+{
+  "items": [
+    {
+      "image": "images/hero.jpg",
+      "category": "realestate",
+      "title_zh": "休斯敦精品住宅",
+      "title_en": "Houston Home"
+    },
+    {
+      "image": "images/construction.jpg",
+      "category": "construction",
+      "title_zh": "新房建造",
+      "title_en": "New Construction"
+    },
+    {
+      "image": "images/management.jpg",
+      "category": "management",
+      "title_zh": "整装待租",
+      "title_en": "Rental Ready"
+    },
+    {
+      "image": "images/mortgage.jpg",
+      "category": "other",
+      "title_zh": "交房签约日",
+      "title_en": "Closing Day"
+    }
+  ]
+}

@@ -1,0 +1,426 @@
+{
+  "settings": {
+    "phone": "(347) 774-5396",
+    "email": "",
+    "wechat": "",
+    "har_url": "https://www.har.com/wenhao-ye/agent_owenye",
+    "loan_url": "https://www.loanfactory.com/wenhaoye",
+    "apply_url": "https://www.loanfactory.com/wenhaoye/apply"
+  },
+  "images": {
+    "profile": "images/wenhao.jpg",
+    "hero_bg": "images/hero.jpg",
+    "svc_realestate": "images/hero.jpg",
+    "svc_mortgage": "images/mortgage.jpg",
+    "svc_construction": "images/construction.jpg",
+    "svc_management": "images/management.jpg"
+  },
+  "texts": {
+    "nav": {
+      "k01": {
+        "zh": "业务",
+        "en": "Services"
+      },
+      "k02": {
+        "zh": "关于我",
+        "en": "About"
+      },
+      "k03": {
+        "zh": "作品相册",
+        "en": "Gallery"
+      },
+      "k04": {
+        "zh": "联系",
+        "en": "Contact"
+      }
+    },
+    "hero": {
+      "k01": {
+        "zh": "休斯敦 · 一站式房产服务",
+        "en": "Houston · One-Stop Real Estate Solutions"
+      },
+      "k02": {
+        "zh": "买房、贷款、建房、管房<br>一个人帮您全部搞定",
+        "en": "Buy, Finance, Build & Manage —<br>All With One Trusted Partner"
+      },
+      "k03": {
+        "zh": "我是 Wenhao Ye，休斯敦持牌地产经纪人与贷款专员，同时经营建筑公司和房屋管理公司。无论您是首次购房、投资出租房，还是想要新建或翻新房屋，我都能为您提供从头到尾的专业服务。",
+        "en": "I'm Wenhao Ye — a licensed Houston REALTOR® and Mortgage Loan Officer, and owner of a construction company and a property management company. Whether you're a first-time buyer, a rental investor, or planning to build or renovate, I support you from start to finish."
+      },
+      "k04": {
+        "zh": "🏠 地产经纪",
+        "en": "🏠 Real Estate"
+      },
+      "k05": {
+        "zh": "💰 房屋贷款",
+        "en": "💰 Mortgage"
+      },
+      "k06": {
+        "zh": "🏗️ 建筑施工",
+        "en": "🏗️ Construction"
+      },
+      "k07": {
+        "zh": "🔑 房屋管理",
+        "en": "🔑 Property Management"
+      },
+      "k08": {
+        "zh": "免费咨询",
+        "en": "Free Consultation"
+      },
+      "k09": {
+        "zh": "REALTOR® · 贷款专员 NMLS #2541101",
+        "en": "REALTOR® · Loan Officer NMLS #2541101"
+      }
+    },
+    "stats": {
+      "k01": {
+        "zh": "项核心业务",
+        "en": "Core Services"
+      },
+      "k02": {
+        "zh": "HAR 买卖/租赁成交",
+        "en": "HAR Sales & Leases"
+      },
+      "k03": {
+        "zh": "贷款执照州",
+        "en": "Mortgage Licensed States"
+      },
+      "k04": {
+        "zh": "中 / 英",
+        "en": "EN / 中"
+      },
+      "k05": {
+        "zh": "中英双语服务",
+        "en": "Bilingual Service"
+      }
+    },
+    "services": {
+      "k01": {
+        "zh": "我的业务",
+        "en": "What I Do"
+      },
+      "k02": {
+        "zh": "四大业务，一站式服务",
+        "en": "Four Services, One Point of Contact"
+      },
+      "k03": {
+        "zh": "从找房、融资，到建造与长期管理，省去您在多家公司之间来回沟通的麻烦。",
+        "en": "From finding a home and financing it, to building and managing it long-term — no more juggling multiple companies."
+      },
+      "k04": {
+        "zh": "地产经纪",
+        "en": "Real Estate Agent"
+      },
+      "k05": {
+        "zh": "大休斯敦地区买房、卖房、租房全程代理，熟悉 Katy、Cypress、Richmond、Alief 等社区。",
+        "en": "Buying, selling and leasing across Greater Houston — Katy, Cypress, Richmond, Alief and more."
+      },
+      "k06": {
+        "zh": "买方代理：找房、看房、谈判、验房",
+        "en": "Buyer representation: search, tours, negotiation, inspection"
+      },
+      "k07": {
+        "zh": "卖方代理：定价、挂牌、营销推广",
+        "en": "Seller listing: pricing, MLS listing, marketing"
+      },
+      "k08": {
+        "zh": "租赁与投资房分析",
+        "en": "Leasing & investment property analysis"
+      },
+      "k09": {
+        "zh": "经纪公司：",
+        "en": "Brokerage: "
+      },
+      "k10": {
+        "zh": "查看 HAR 房源 →",
+        "en": "View HAR listings →"
+      },
+      "k11": {
+        "zh": "房屋贷款",
+        "en": "Mortgage Loans"
+      },
+      "k12": {
+        "zh": "持牌贷款专员，可比较多家贷款机构的利率与产品，为您找到合适方案。",
+        "en": "Licensed loan officer comparing rates and programs across many lenders to find the right fit."
+      },
+      "k13": {
+        "zh": "首次购房、Conventional / FHA / VA",
+        "en": "First-time buyer, Conventional / FHA / VA"
+      },
+      "k14": {
+        "zh": "再融资、投资房 DSCR 贷款",
+        "en": "Refinance & investor DSCR loans"
+      },
+      "k15": {
+        "zh": "非传统收入 / 外国人贷款咨询",
+        "en": "Non-QM & foreign national options"
+      },
+      "k16": {
+        "zh": "在线申请 →",
+        "en": "Apply online →"
+      },
+      "k17": {
+        "zh": "建筑公司",
+        "en": "Construction"
+      },
+      "k18": {
+        "zh": "新建住宅、翻新改造、维修工程，从设计、报批到施工交付全程把控质量与预算。",
+        "en": "New builds, remodels and repairs — managing design, permits, budget and quality through delivery."
+      },
+      "k19": {
+        "zh": "新房建造 / 自建房 / 投资开发",
+        "en": "New construction & infill development"
+      },
+      "k20": {
+        "zh": "厨房、浴室、全屋翻新",
+        "en": "Kitchen, bath & whole-home remodels"
+      },
+      "k21": {
+        "zh": "买房前维修报价与验房问题修复",
+        "en": "Pre-sale repairs & inspection fixes"
+      },
+      "k22": {
+        "zh": "与地产及贷款业务无缝衔接",
+        "en": "Seamlessly connected with real estate & lending"
+      },
+      "k23": {
+        "zh": "房屋管理",
+        "en": "Property Management"
+      },
+      "k24": {
+        "zh": "为房东和外地投资者提供省心的出租房管理，让您的房产稳定产生收益。",
+        "en": "Hands-off rental management for landlords and out-of-state investors — steady, reliable income."
+      },
+      "k25": {
+        "zh": "招租、租客筛选、签约",
+        "en": "Marketing, tenant screening & leasing"
+      },
+      "k26": {
+        "zh": "收租、维修、定期巡查",
+        "en": "Rent collection, maintenance & inspections"
+      },
+      "k27": {
+        "zh": "月度报表，远程投资者也放心",
+        "en": "Monthly statements for remote owners"
+      },
+      "k28": {
+        "zh": "自有施工团队，维修更快更省",
+        "en": "In-house crew = faster, lower-cost repairs"
+      }
+    },
+    "flow": {
+      "k01": {
+        "zh": "为什么选择我",
+        "en": "Why Work With Me"
+      },
+      "k02": {
+        "zh": "一条龙投资流程",
+        "en": "A Seamless Investment Journey"
+      },
+      "k03": {
+        "zh": "1. 找房选房",
+        "en": "1. Find"
+      },
+      "k04": {
+        "zh": "根据预算与目标，精选自住或投资房源",
+        "en": "Curated homes matched to your budget and goals"
+      },
+      "k05": {
+        "zh": "2. 贷款融资",
+        "en": "2. Finance"
+      },
+      "k06": {
+        "zh": "同步预批贷款，比较利率，快速成交",
+        "en": "Pre-approval, rate shopping and a smooth closing"
+      },
+      "k07": {
+        "zh": "3. 翻新建造",
+        "en": "3. Build / Renovate"
+      },
+      "k08": {
+        "zh": "自有施工团队，提升房屋价值",
+        "en": "In-house crew adds value to your property"
+      },
+      "k09": {
+        "zh": "4. 出租管理",
+        "en": "4. Lease & Manage"
+      },
+      "k10": {
+        "zh": "招租托管，持续稳定现金流",
+        "en": "Tenant placement and ongoing cash flow"
+      }
+    },
+    "about": {
+      "k01": {
+        "zh": "休斯敦<br><small>德克萨斯州</small>",
+        "en": "Houston<br><small>Texas</small>"
+      },
+      "k02": {
+        "zh": "关于我",
+        "en": "About Me"
+      },
+      "k03": {
+        "zh": "我在休斯敦从事房地产相关行业，深知客户在买房、贷款、装修和出租过程中遇到的各种难题。因此我把四项业务整合在一起，让客户只需要一个联系人，就能完成从购房到长期持有的全部环节。",
+        "en": "I work across Houston's real estate industry and understand the challenges clients face when buying, financing, renovating and renting. That's why I brought four services together — so you need just one contact from purchase through long-term ownership."
+      },
+      "k04": {
+        "zh": "我服务华人家庭、首次购房者以及本地和外地投资者，提供中英文双语沟通，诚信、透明、高效是我的工作原则。",
+        "en": "I serve families, first-time buyers, and local and out-of-state investors in both Chinese and English. Integrity, transparency and efficiency guide everything I do."
+      },
+      "k05": {
+        "zh": "HAR 会员",
+        "en": "HAR Member"
+      },
+      "k06": {
+        "zh": "贷款专员",
+        "en": "Loan Officer"
+      },
+      "k07": {
+        "zh": "企业主",
+        "en": "Business Owner"
+      },
+      "k08": {
+        "zh": "建筑公司 · 房屋管理公司",
+        "en": "Construction · Property Mgmt"
+      }
+    },
+    "gallery": {
+      "k01": {
+        "zh": "作品与房源",
+        "en": "Portfolio"
+      },
+      "k02": {
+        "zh": "作品相册",
+        "en": "Project Gallery"
+      },
+      "k03": {
+        "zh": "成交房源、施工项目、管理物业的真实照片",
+        "en": "Real photos of sold homes, construction projects and managed properties"
+      },
+      "k04": {
+        "zh": "全部",
+        "en": "All"
+      },
+      "k05": {
+        "zh": "地产",
+        "en": "Real Estate"
+      },
+      "k06": {
+        "zh": "建筑",
+        "en": "Construction"
+      },
+      "k07": {
+        "zh": "房屋管理",
+        "en": "Management"
+      },
+      "k08": {
+        "zh": "其他",
+        "en": "Other"
+      }
+    },
+    "contact": {
+      "k01": {
+        "zh": "联系我",
+        "en": "Get In Touch"
+      },
+      "k02": {
+        "zh": "开始您的休斯敦房产之旅",
+        "en": "Start Your Houston Real Estate Journey"
+      },
+      "k03": {
+        "zh": "买房、贷款、建房还是托管？欢迎随时联系，中英文均可。",
+        "en": "Buying, financing, building or managing? Reach out anytime — Chinese or English."
+      },
+      "k04": {
+        "zh": "电话 / 短信",
+        "en": "Phone / Text"
+      },
+      "k05": {
+        "zh": "邮箱",
+        "en": "Email"
+      },
+      "k06": {
+        "zh": "微信",
+        "en": "WeChat"
+      },
+      "k07": {
+        "zh": "HAR 房源主页",
+        "en": "HAR Profile"
+      },
+      "k08": {
+        "zh": "贷款申请",
+        "en": "Loan Application"
+      },
+      "k09": {
+        "zh": "服务区域",
+        "en": "Service Area"
+      },
+      "k10": {
+        "zh": "大休斯敦地区 Greater Houston, TX",
+        "en": "Greater Houston, TX"
+      },
+      "k11": {
+        "zh": "免费咨询",
+        "en": "Free Consultation"
+      },
+      "k12": {
+        "zh": "您的姓名",
+        "en": "Your name"
+      },
+      "k13": {
+        "zh": "电话",
+        "en": "Phone"
+      },
+      "k14": {
+        "zh": "邮箱（可选）",
+        "en": "Email (optional)"
+      },
+      "k15": {
+        "zh": "我想买房",
+        "en": "I want to buy"
+      },
+      "k16": {
+        "zh": "我想卖房",
+        "en": "I want to sell"
+      },
+      "k17": {
+        "zh": "贷款 / 再融资",
+        "en": "Mortgage / Refinance"
+      },
+      "k18": {
+        "zh": "建房 / 翻新",
+        "en": "Build / Renovate"
+      },
+      "k19": {
+        "zh": "房屋托管",
+        "en": "Property Management"
+      },
+      "k20": {
+        "zh": "请简单描述您的需求",
+        "en": "Tell me about your needs"
+      },
+      "k21": {
+        "zh": "发送短信给 Wenhao",
+        "en": "Text Wenhao"
+      }
+    },
+    "footer": {
+      "k01": {
+        "zh": "德州休斯敦",
+        "en": "Houston, TX"
+      },
+      "k02": {
+        "zh": "Walzel Properties 持牌地产经纪人 · 贷款专员 NMLS #2541101，Loan Factory, Inc.（NMLS #320841）· 平等住房机会",
+        "en": "REALTOR® with Walzel Properties · Mortgage Loan Officer NMLS #2541101, Loan Factory, Inc. (NMLS #320841) · Equal Housing Opportunity"
+      },
+      "k03": {
+        "zh": "TREC 消费者保护通知",
+        "en": "TREC Consumer Protection Notice"
+      },
+      "k04": {
+        "zh": "TREC 经纪服务信息",
+        "en": "TREC Information About Brokerage Services"
+      }
+    }
+  }
+}
